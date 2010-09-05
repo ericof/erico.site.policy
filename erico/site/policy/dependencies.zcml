@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="erico.site.policy">
+
+    <include package='collective.disqus' />
+    <include package='collective.simplesocial' />
+    <include package='collective.siterss' />
+    <include package='collective.ui.ie6nomore' />
+    <include package='collective.portlet.keywordmatches' />
+    <include package='Products.contentmigration' />
+    <include package='Products.LinguaPlone' />
+    <include package='Products.PlonePopoll' />
+    <include package='sc.contentrules.groupbydate' />
+    <include package='collective.blogging' />
+    <include package='collective.js.jquery' />
+    <include package='collective.js.jqueryui' />
+    <include package="erico.site.theme" />
+
+</configure>

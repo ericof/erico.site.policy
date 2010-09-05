@@ -1,0 +1,31 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="erico.site.policy">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <include package=".browser" />
+    <include file="dependencies.zcml" />
+    
+    <genericsetup:registerProfile
+        name="default"
+        title="erico.site.policy"
+        directory="profiles/default"
+        description="erico.site.policy"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        i18n:attributes="title; description"
+        />
+        
+    <i18n:registerTranslations directory="locales" />
+    
+    <!-- Oculta produtos no quickinstaller -->
+    <utility factory=".quickinstaller.HiddenProfiles"
+             name="erico.site.policy" />
+    <utility factory=".quickinstaller.HiddenProducts"
+             name="erico.site.policy" />
+    
+    <include package=".upgrades" />
+</configure>

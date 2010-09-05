@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="erico.site.policy">
+    
+    <!-- Upgrades-->
+    <genericsetup:upgradeStep
+        title="Upgrade for erico.site.policy"
+        description=""
+        source="0.0"
+        destination="1.0"
+        sortkey="1"
+        handler="erico.site.policy.upgrades.to01.upgrade0to1"
+        profile="erico.site.policy:default" />
+        
+</configure>
